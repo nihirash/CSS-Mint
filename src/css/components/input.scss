@@ -30,7 +30,7 @@ input[type="search"]:focus {
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="url"]:focus {
 	outline: none;
-	border-color: #5C9DED;
+	border-color: $default-btn;
 	box-shadow: 0px 0px 3px #4B8CDC;
 }
 
@@ -117,7 +117,7 @@ input.error:-ms-input-placeholder {
 }
 
 select {
-	background-color: #5C9DED;
+	background-color: $default-btn;
     color: #fff;
     font-size: 0.88em;
     border: none;

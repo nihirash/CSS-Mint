@@ -10,11 +10,11 @@ table {
 }
 
 table.info {
-	border-color: #5C9DED;
+	border-color: $default-btn;
 }
 
 table.info > thead {
-	background-color: #5C9DED;
+	background-color: $default-btn;
 }
 
 table.info > thead > tr > th {
@@ -22,7 +22,7 @@ table.info > thead > tr > th {
 }
 
 table.info > thead, table.info > tfoot {
-	border-color: #5C9DED;
+	border-color: $default-btn;
 }
 
 th, td {

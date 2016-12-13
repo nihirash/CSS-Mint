@@ -3,20 +3,24 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    'build/css-mint.min.css': ['src/css/normalize.css', 'src/css/buttons.css', 'src/css/footer.css', 'src/css/header.css', 'src/css/navbar.css', 'src/css/panel.css', 'src/css/typography.css', 'src/css/utilities.css', 'src/css/grid.css', 'src/css/card.css', 'src/css/base.css', 'src/css/alert.css', 'src/css/input.css', 'src/css/tables.css', 'src/css/breadcrumb.css', 'src/css/pagination.css', 'src/css/badge.css', 'src/css/thumbnails.css']
+                    'build/css-mint.min.css': 'build/css-mint.css'
                 }
             }
         },
-        concat: {
-            dist: {
-                src: ['src/css/normalize.css', 'src/css/buttons.css', 'src/css/footer.css', 'src/css/header.css', 'src/css/navbar.css', 'src/css/panel.css', 'src/css/typography.css', 'src/css/utilities.css', 'src/css/grid.css', 'src/css/card.css', 'src/css/base.css', 'src/css/alert.css', 'src/css/input.css', 'src/css/tables.css', 'src/css/breadcrumb.css', 'src/css/pagination.css', 'src/css/badge.css', 'src/css/thumbnails.css'],
-                dest: 'build/css-mint.css',
+        sass: {
+            options: {
+
             },
+            dist: {
+                files: {
+                    'build/css-mint.css': 'src/css/main.scss'
+                }
+            }
         },
         watch: {
             scripts: {
-                files: ['src/css/*.css'],
-                tasks: ['concat','cssmin'],
+                files: ['src/css/*', 'src/css/components/*'],
+                tasks: ['sass','cssmin'],
                 options: {
                     spawn: false,
                 },
@@ -25,6 +29,6 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.registerTask('default', ['watch']);
 };

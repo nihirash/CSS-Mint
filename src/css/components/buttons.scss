@@ -54,7 +54,7 @@
 
 .btn.primary, input[type="submit"], input[type="button"] {
   color: #fff;
-  background-color: #5C9DED;
+  background-color: $default-btn;
   border: 1px solid #4B8CDC;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .btn.primary.line {
-  color: #5C9DED;
+  color: $default-btn;
 }
 
 .btn.success.line {

@@ -16,7 +16,7 @@ ul.breadcrumb li {
 ul.breadcrumb li a {
     color: #FFF;
     display: block;
-    background: #5C9DED;
+    background: $default-btn;
     text-decoration: none;
     position: relative;
     line-height: 20px;
@@ -27,16 +27,16 @@ ul.breadcrumb li a {
 }
 
 ul.breadcrumb li:nth-child(even) a {
-    background-color: #5C9DED;
+    background-color: $default-btn;
 }
 
 ul.breadcrumb li:nth-child(even) a:before {
-    border-color: #5C9DED;
+    border-color: $default-btn;
     border-left-color: transparent;
 }
 
 ul.breadcrumb li:nth-child(even) a:after {
-    border-left-color: #5C9DED;
+    border-left-color: $default-btn;
 }
 
 ul.breadcrumb li:first-child a {
@@ -66,7 +66,7 @@ ul.breadcrumb li a:after {
     content: "";
     position: absolute;
     top: 0;
-    border: 0 solid #5C9DED;
+    border: 0 solid $default-btn;
     border-width: 10px;
     width: 0;
     height: 0;
@@ -80,7 +80,7 @@ ul.breadcrumb li a:before {
 ul.breadcrumb li a:after {
     left: 100%;
     border-color: transparent;
-    border-left-color: #5C9DED;
+    border-left-color: $default-btn;
 }
 
 ul.breadcrumb li a:hover {
